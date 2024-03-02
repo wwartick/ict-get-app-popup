@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Get App Popup</title>
 </head>
@@ -16,17 +16,25 @@
         <h1>Get the app</h1>
         <h4>Choose any of the following options to get the app for your device</h4>
         <div class="item-containers">
-            <div class="phone-square">
-                <ion-icon id="phone-icon" name="phone-portrait-outline"></ion-icon>
-                <h5>Phone</h5>
+            <div class="container-square">
+                <div class="item-square phone-square">
+                    <ion-icon id="phone-icon" name="phone-portrait-outline"></ion-icon>
+                    <span>Phone</span>
+                </div>
             </div>
-            <div class="QR-square">
-                <ion-icon id="qr-code-icon" name="qr-code-outline"></ion-icon>
-                <h5>QR Code</h5>
+
+            <div class="container-square">
+                <div class="item-square qr-square">
+                    <ion-icon id="qr-code-icon" name="qr-code-outline"></ion-icon>
+                    <span>QR Code</span>
+                </div>
             </div>
-            <div class="link-square">
-                <ion-icon id="chain-icon" name="link-outline"></ion-icon>
-                <h5>Link</h5>
+
+            <div class="container-square">
+                <div class="item-square link-square">
+                    <ion-icon id="link-icon" name="link-outline"></ion-icon>
+                    <span>Link</span>
+                </div>
             </div>
         </div>
     </div>

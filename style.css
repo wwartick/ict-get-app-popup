@@ -1,6 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     background-image: url('https://cdn.discordapp.com/attachments/998848403373043752/1213574842754801745/alberto-bianchini-krPdyjs1iTM-unsplash.jpg?ex=65f5f8a5&is=65e383a5&hm=68be25bc5d9a6f18c4e06f20149fbf81c21b3edcd0288c433d7020a60773a185&');
     background-size: cover;
     min-height: 100vh;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container{
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    padding-bottom: 2rem;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 7px 5px 5px rgba(65, 63, 63, 0.329);
+
+    >h1,>h4{
+        color: rgb(6, 6, 85);
+        font-weight: 400;
+        width: 80%;
+        text-align: center;
+
+    }
+
+    >h1{
+        font-size: 3em;
+        letter-spacing: 1px;
+    }
+
+    >h4{
+        font-size: 2em;
+        line-height: 2.75rem;
+    }
+}
+
+#close-icon{
+    align-self: flex-end;
+    font-size: 4em;
+    opacity: .7;
+    transition: all 300ms ease-in;
+    border-radius: 50%;
+
+    &:hover{
+        transform: rotate(180deg);
+        background-color: rgba(6, 6, 85, 0.568);
+    }
+}
+
+.item-containers{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.item-square{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    gap: 1.35em;
+    color: rgb(6, 6, 85);
+    aspect-ratio: 1;
+    height: 15vh;
+
+    >span{
+        font-size: 1.25em;
+        font-weight: 500;
+    }
+
+    >ion-icon{
+        font-size: 2.5em;
+    }
+}
+
+#link-icon{
+    transform: rotate(45deg);
+}
+
+.item-containers >*:hover,
+#close-icon:hover{
+    cursor: pointer;
+}
+
+.container-square{
+    border: 20px solid rgba(31, 31, 214, 0.233);
+    border-radius: 5px;
+}
+
+.phone-square{
+    background: linear-gradient(to right, white 50%, rgba(6, 6, 85, 0.568) 50%)  left;
+    background-size: 200% 100%;
+    transition: all 250ms ease-in-out;
+
+    &:hover{
+        background-position: right;
+        color: white;
+    }
+}
+
+.qr-square{
+    background-image: linear-gradient(rgba(6, 6, 85, 0.568), rgba(6, 6, 85, 0.568));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: all 250ms ease-in-out;
+
+    &:hover{
+        background-size: 100% 100%;
+        color: #fff;
+      
+    }
+}
+
+.link-square{
+    background: linear-gradient(to left, white 50%, rgba(6, 6, 85, 0.568) 50%)  right;
+    background-size: 200% 100%;
+    transition: all 250ms ease-in-out;
+
+    &:hover{
+        background-position: left;
+        color: white;
+    }
+}
+
+@media (max-width: 840px){
+
+    .item-containers{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-square{
+        width: fit-content;
+    }
+}
+
+@media (max-width: 1200px ) {
+    .main-container{
+        width: 80vw;
+
+        >h1,>h4{
+            color: rgb(6, 6, 85);
+            font-weight: 400;
+            width: 70%;
+            text-align: center;
+        }
+
+        >h1{
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+    
+        >h4{
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+    }
+
+    #close-icon{
+        font-size: 3em;
+    }
+
+    .item-containers{
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        scale: 70%;
+    }
+
+
+    .qr-square >span{
+        font-size: .75rem;
+    }
+    
 }
